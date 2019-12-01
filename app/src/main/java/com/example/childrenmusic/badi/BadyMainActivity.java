@@ -44,6 +44,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
             recyclerView.startNestedScroll(View.SCROLL_AXIS_VERTICAL,ViewCompat.TYPE_NON_TOUCH);
         }*/
         // net=findViewById(R.id.netset);
+
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
 
         BadyAdapter adapter=new BadyAdapter(this, DataGenerator.getAlbumDataModel(this),this);

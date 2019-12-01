@@ -51,6 +51,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         adapter.notifyDataSetChanged();
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL));
         recyclerView.setAdapter(adapter);
+
     }
 
     @Override

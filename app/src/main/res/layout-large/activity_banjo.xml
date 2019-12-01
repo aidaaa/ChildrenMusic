@@ -64,8 +64,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="@drawable/curve_white">
+                android:layout_weight="2">
 
                 <com.google.android.exoplayer2.ui.PlayerControlView
                     android:id="@+id/player_view_banjo"
@@ -75,7 +74,6 @@
                     app:hide_on_touch="false"
                     android:layout_alignParentBottom="true"
                     android:focusable="true"
-                    android:background="@drawable/curve"
                     app:controller_layout_id="@layout/exo_controller"
                     android:layout_alignParentRight="true"
                     ></com.google.android.exoplayer2.ui.PlayerControlView>

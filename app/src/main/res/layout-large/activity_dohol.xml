@@ -40,6 +40,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textStyle="bold"
+                    android:textSize="25sp"
                     android:text="@string/text"
                     android:layout_margin="50dp"/>
 
@@ -74,7 +75,6 @@
                     app:hide_on_touch="false"
                     android:layout_alignParentBottom="true"
                     android:focusable="true"
-                    android:background="@drawable/curve"
                     app:controller_layout_id="@layout/exo_controller"
                     android:layout_alignParentRight="true"
                     ></com.google.android.exoplayer2.ui.PlayerControlView>

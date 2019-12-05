@@ -24,7 +24,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageViewCollapsing"
+                    android:id="@+id/imageViewCollapsing_k"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -33,7 +33,7 @@
                     app:layout_collapseParallaxMultiplier="0.7" />
 
                 <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
+                    android:id="@+id/toolbar_k"
                     android:layout_width="match_parent"
                     android:layout_height="550dp"
                     app:layout_collapseMode="pin"

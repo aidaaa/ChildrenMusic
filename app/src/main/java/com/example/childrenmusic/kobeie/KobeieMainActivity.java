@@ -1,6 +1,9 @@
 package com.example.childrenmusic.kobeie;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +12,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
@@ -23,6 +27,7 @@ import com.example.childrenmusic.kobeie.player.DoholActivity;
 public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapter.KobeieOnClick {
 
     private RecyclerView recyclerView;
+    Toolbar toolbar_k;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,7 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
 
 
         recyclerView=findViewById(R.id.recycler_kobeie);
+        toolbar_k=findViewById(R.id.toolbar_k);
 
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setHasFixedSize(true);
@@ -41,8 +47,22 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
         KobeieAdapter adapter=new KobeieAdapter(this, KobeieDataGenerator.getKobeieDataModel(this),this);
         adapter.notifyDataSetChanged();
 
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 4,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(adapter);
+
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.qavaal);
+        int imageHeight = bd.getBitmap().getHeight();
+        int imageWidth = bd.getBitmap().getWidth();
+
+
+        BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.koobei_inter_menu);
+        int imageHeight1 = bd1.getBitmap().getHeight();
+        int imageWidth1 = bd1.getBitmap().getWidth();
+
+        CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar_k.getLayoutParams();
+        int a=imageHeight-layoutParams.MATCH_PARENT;
+        layoutParams.height =imageHeight1;
+        toolbar_k.setLayoutParams(layoutParams);
     }
 
     @Override

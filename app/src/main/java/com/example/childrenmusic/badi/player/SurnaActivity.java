@@ -45,31 +45,31 @@ public class SurnaActivity extends AppCompatActivity {
         {
             case 0:
                surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qerne_player,null));
-               uri="http://192.168.10.182:8099/sorna.mp3";
+               uri="http://192.168.10.184:8099/sorna.mp3";
                 break;
             case 1:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.surna_player,null));
-                uri="http://192.168.10.182:8099/sorna.mp3";
+                uri="http://192.168.10.184:8099/sorna.mp3";
                 break;
             case 2:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.ney_jofti_player,null));
-                uri="http://192.168.10.182:8099/ney7band.mp3";
+                uri="http://192.168.10.184:8099/ney7band.mp3";
                 break;
             case 3:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.ney_player,null));
-                uri="http://192.168.10.182:8099/sorna.mp3";
+                uri="http://192.168.10.184:8099/sorna.mp3";
                 break;
             case 4:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.boq_player,null));
-                uri="http://192.168.10.182:8099/sorna.mp3";
+                uri="http://192.168.10.184:8099/sorna.mp3";
                 break;
             case 5:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.ney_anbone,null));
-                uri="http://192.168.10.182:8099/neyanbune.mp3";
+                uri="http://192.168.10.184:8099/neyanbune.mp3";
                 break;
             case 6:
                 surna_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.korna_player,null));
-                uri="http://192.168.10.182:8099/karna.mp3";
+                uri="http://192.168.10.184:8099/karna.mp3";
                 break;
         }
 

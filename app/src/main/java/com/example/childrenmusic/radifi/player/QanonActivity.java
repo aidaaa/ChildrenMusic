@@ -46,23 +46,23 @@ public class QanonActivity extends AppCompatActivity {
         {
             case 0:
                 qanon_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.setar_player, null));
-                uri = "http://192.168.10.182:8099/setar.mp3";
+                uri = "http://192.168.10.184:8099/setar.mp3";
                 break;
             case 1:
                 qanon_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.tar_player, null));
-                uri = "http://192.168.10.182:8099/tar.mp3";
+                uri = "http://192.168.10.184:8099/tar.mp3";
                 break;
             case 2:
                 qanon_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.tombak_player, null));
-                uri = "http://192.168.10.182:8099/tombak.mp3";
+                uri = "http://192.168.10.184:8099/tombak.mp3";
                 break;
             case 3:
                 qanon_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qanon_player, null));
-                uri = "http://192.168.10.182:8099/ghanun.mp3";
+                uri = "http://192.168.10.184:8099/ghanun.mp3";
                 break;
             case 4:
                 qanon_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.santor_player, null));
-                uri = "http://192.168.10.182:8099/santur.mp3";
+                uri = "http://192.168.10.184:8099/santur.mp3";
                 break;
         }
 

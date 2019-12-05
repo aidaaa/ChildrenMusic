@@ -32,7 +32,7 @@
                     app:layout_collapseParallaxMultiplier="0.7" />
 
                 <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
+                    android:id="@+id/toolbar_r"
                     android:layout_width="match_parent"
                     android:layout_height="550dp"
                     app:layout_collapseMode="pin"

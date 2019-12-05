@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 
 import com.example.childrenmusic.R;
+import com.example.childrenmusic.badi.BadyMainActivity;
 import com.example.childrenmusic.badi.datamodel.BadyDataModel;
 
 import java.util.List;
@@ -38,6 +39,7 @@ public class BadyAdapter extends RecyclerView.Adapter<BadyAdapter.AlbumViewHolde
     public void onBindViewHolder(@NonNull AlbumViewHolder albumViewHolder, int i) {
 
         albumViewHolder.onBind(models.get(albumViewHolder.getAdapterPosition()));
+        int h=albumViewHolder.img.getHeight();
         /*BadyDataModel main=models.get(i);
         albumViewHolder.img.setImageDrawable(main.getImage());*/
     }

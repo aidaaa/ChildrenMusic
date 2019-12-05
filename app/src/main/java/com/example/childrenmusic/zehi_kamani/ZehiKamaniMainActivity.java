@@ -1,12 +1,15 @@
 package com.example.childrenmusic.zehi_kamani;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.WindowManager;
 
 import com.example.childrenmusic.R;
@@ -18,6 +21,7 @@ import com.example.childrenmusic.zehi_kamani.player.QeychakActivity;
 public class ZehiKamaniMainActivity extends AppCompatActivity implements ZehiKamaniAdapter.ZehiKamaniOnclick{
 
     RecyclerView recycler_zehi_kamani;
+    Toolbar toolbar_ka;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class ZehiKamaniMainActivity extends AppCompatActivity implements ZehiKam
 
 
         recycler_zehi_kamani=findViewById(R.id.recycler_zehi_kamani);
+        toolbar_ka=findViewById(R.id.toolbar_ka);
 
         ViewCompat.setNestedScrollingEnabled(recycler_zehi_kamani, false);
         recycler_zehi_kamani.setHasFixedSize(true);
@@ -39,6 +44,20 @@ public class ZehiKamaniMainActivity extends AppCompatActivity implements ZehiKam
 
         recycler_zehi_kamani.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL,false));
         recycler_zehi_kamani.setAdapter(adapter);
+
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.qavaal);
+        int imageHeight = bd.getBitmap().getHeight();
+        int imageWidth = bd.getBitmap().getWidth();
+
+
+        BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.koobei_inter_menu);
+        int imageHeight1 = bd1.getBitmap().getHeight();
+        int imageWidth1 = bd1.getBitmap().getWidth();
+
+        CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar_ka.getLayoutParams();
+        int a=imageHeight-layoutParams.MATCH_PARENT;
+        layoutParams.height =imageHeight1;
+        toolbar_ka.setLayoutParams(layoutParams);
     }
 
     @Override

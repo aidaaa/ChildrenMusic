@@ -42,19 +42,19 @@ public class DoholActivity extends AppCompatActivity {
         switch (id) {
             case 0:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qaval_player, null));
-                uri = "http://192.168.10.184:8099/sorna.mp3";
+                uri = "http://192.168.10.85:8099/sorna.mp3";
                 break;
             case 1:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.naqare_player, null));
-                uri = "http://192.168.10.184:8099/naghare.mp3";
+                uri = "http://192.168.10.85:8099/naghare.mp3";
                 break;
             case 2:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.dohol_player, null));
-                uri = "http://192.168.10.184:8099/dohol.mp3";
+                uri = "http://192.168.10.85:8099/dohol.mp3";
                 break;
             case 3:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.senj_player, null));
-                uri = "http://192.168.10.184:8099/sorna.mp3";
+                uri = "http://192.168.10.85:8099/sorna.mp3";
                 break;
         }
 

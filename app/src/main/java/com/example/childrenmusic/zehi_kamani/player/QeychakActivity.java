@@ -42,11 +42,11 @@ public class QeychakActivity extends AppCompatActivity {
         switch (id) {
             case 0:
                 qeychak_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.kamanche_player, null));
-                uri = "http://192.168.10.184:8099/kamanche.mp3";
+                uri = "http://192.168.10.85:8099/kamanche.mp3";
                 break;
             case 1:
                 qeychak_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qeychak_player, null));
-                uri = "http://192.168.10.184:8099/ghezhak.mp3";
+                uri = "http://192.168.10.85:8099/ghezhak.mp3";
                 break;
         }
 

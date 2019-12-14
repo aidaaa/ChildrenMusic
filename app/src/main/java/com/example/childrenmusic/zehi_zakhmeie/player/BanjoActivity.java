@@ -42,19 +42,19 @@ public class BanjoActivity extends AppCompatActivity {
         switch (id) {
             case 0:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.oud_player, null));
-                uri = "http://192.168.10.184:8099/oud.mp3";
+                uri = "http://192.168.10.85:8099/oud.mp3";
                 break;
             case 1:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.robab_player, null));
-                uri = "http://192.168.10.184:8099/robab.mp3";
+                uri = "http://192.168.10.85:8099/robab.mp3";
                 break;
             case 2:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.banjo_player, null));
-                uri = "http://192.168.10.184:8099/banjo.mp3";
+                uri = "http://192.168.10.85:8099/banjo.mp3";
                 break;
             case 3:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.zanborak_player, null));
-                uri = "http://192.168.10.184:8099/zanburak.mp3";
+                uri = "http://192.168.10.85:8099/zanburak.mp3";
                 break;
         }
 

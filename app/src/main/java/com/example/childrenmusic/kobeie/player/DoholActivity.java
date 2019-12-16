@@ -1,6 +1,7 @@
 package com.example.childrenmusic.kobeie.player;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.childrenmusic.R;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -28,6 +30,7 @@ public class DoholActivity extends AppCompatActivity {
     private SimpleExoPlayer player;
     private ImageView dohol_img;
     String uri;
+    TextView txt_dohol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,10 @@ public class DoholActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dohol);
         player_view_dohol=findViewById(R.id.player_view_dohol);
         dohol_img=findViewById(R.id.dohol_img);
+
+        txt_dohol=findViewById(R.id.txt_dohol);
+        Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
+        txt_dohol.setTypeface(typface);
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

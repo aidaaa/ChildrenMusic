@@ -1,6 +1,7 @@
 package com.example.childrenmusic.zehi_kamani.player;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.childrenmusic.R;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -28,6 +30,7 @@ public class QeychakActivity extends AppCompatActivity {
     private PlayerControlView player_view_qeychak;
     ImageView qeychak_img;
     String uri;
+    TextView txt_qeychak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,10 @@ public class QeychakActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qeychak);
         player_view_qeychak=findViewById(R.id.player_view_qeychak);
         qeychak_img=findViewById(R.id.qeychak_img);
+
+        txt_qeychak=findViewById(R.id.txt_qeychak);
+        Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
+        txt_qeychak.setTypeface(typface);
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

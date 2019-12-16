@@ -1,6 +1,7 @@
 package com.example.childrenmusic.radifi.player;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.childrenmusic.R;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -29,6 +31,7 @@ public class QanonActivity extends AppCompatActivity {
     private PlayerControlView player_view_qanon;
     ImageView qanon_img;
     String uri;
+    TextView txt_qanon;
 
 
     @Override
@@ -38,6 +41,10 @@ public class QanonActivity extends AppCompatActivity {
 
         player_view_qanon=findViewById(R.id.player_view_qanon);
         qanon_img=findViewById(R.id.qanon_img);
+
+        txt_qanon=findViewById(R.id.txt_qanon);
+        Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
+        txt_qanon.setTypeface(typface);
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

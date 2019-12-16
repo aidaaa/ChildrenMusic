@@ -1,6 +1,7 @@
 package com.example.childrenmusic.zehi_zakhmeie.player;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.childrenmusic.R;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -28,6 +30,7 @@ public class BanjoActivity extends AppCompatActivity {
     private PlayerControlView player_view_banjo;
     ImageView banjo_img;
     String uri;
+    TextView txt_banjo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,10 @@ public class BanjoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_banjo);
         player_view_banjo=findViewById(R.id.player_view_banjo);
         banjo_img=findViewById(R.id.banjo_img);
+
+        txt_banjo=findViewById(R.id.txt_banjo);
+        Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
+        txt_banjo.setTypeface(typface);
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

@@ -9,7 +9,6 @@ import android.view.WindowManager;
 import com.example.childrenmusic.R;
 import com.example.childrenmusic.main.MainActivity;
 
-
 /**
  * Created by AIDA-PC on 12/19/2017.
  */

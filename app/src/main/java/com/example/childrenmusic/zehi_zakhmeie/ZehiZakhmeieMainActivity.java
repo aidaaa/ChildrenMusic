@@ -43,11 +43,12 @@ public class ZehiZakhmeieMainActivity extends AppCompatActivity implements ZehiZ
         ZehiZakhmeieAdapter adapter=new ZehiZakhmeieAdapter(this, ZehiZakhmeieDataGenerator.getZehiZakhmeieDataModel(this),this);
         adapter.notifyDataSetChanged();
 
-        zehi_zakhme_recycler.setLayoutManager(new GridLayoutManager(this, 4, LinearLayoutManager.VERTICAL,false));
+        zehi_zakhme_recycler.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL,false));
         zehi_zakhme_recycler.setAdapter(adapter);
 
         BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.qavaal);
         int imageHeight = bd.getBitmap().getHeight();
+        int finalImageHeghit=imageHeight;
         int imageWidth = bd.getBitmap().getWidth();
 
 
@@ -57,7 +58,7 @@ public class ZehiZakhmeieMainActivity extends AppCompatActivity implements ZehiZ
 
         CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar_z.getLayoutParams();
         int a=imageHeight-layoutParams.MATCH_PARENT;
-        layoutParams.height =imageHeight1;
+        layoutParams.height =imageHeight1-finalImageHeghit;
         toolbar_z.setLayoutParams(layoutParams);
     }
 

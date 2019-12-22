@@ -42,7 +42,7 @@ public class ZehiKamaniMainActivity extends AppCompatActivity implements ZehiKam
         ZehiKamaniAdapter adapter=new ZehiKamaniAdapter(this, ZehiKamaniDataGenerator.getZehiKamaniDataModel(this),this);
         adapter.notifyDataSetChanged();
 
-        recycler_zehi_kamani.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL,false));
+        recycler_zehi_kamani.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL,false));
         recycler_zehi_kamani.setAdapter(adapter);
 
         BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.qavaal);

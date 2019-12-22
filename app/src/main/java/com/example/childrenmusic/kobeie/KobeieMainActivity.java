@@ -47,11 +47,12 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
         KobeieAdapter adapter=new KobeieAdapter(this, KobeieDataGenerator.getKobeieDataModel(this),this);
         adapter.notifyDataSetChanged();
 
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 4,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(adapter);
 
         BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.qavaal);
         int imageHeight = bd.getBitmap().getHeight();
+        int finalImageHeghit=imageHeight;
         int imageWidth = bd.getBitmap().getWidth();
 
 
@@ -61,7 +62,8 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
 
         CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar_k.getLayoutParams();
         int a=imageHeight-layoutParams.MATCH_PARENT;
-        layoutParams.height =imageHeight1;
+        layoutParams.height =imageHeight1-finalImageHeghit;
+        //layoutParams.height =imageHeight1;
         toolbar_k.setLayoutParams(layoutParams);
     }
 

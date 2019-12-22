@@ -67,11 +67,13 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         adapter.notifyDataSetChanged();
 
         //recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 4, LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(adapter);
 
         BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
+
         int imageHeight = bd.getBitmap().getHeight();
+        int finalImageHeghit=imageHeight+imageHeight;
         int imageWidth = bd.getBitmap().getWidth();
 
 
@@ -80,10 +82,10 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         int imageWidth1 = bd1.getBitmap().getWidth();
 
        CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar1.getLayoutParams();
-       int a=imageHeight-layoutParams.MATCH_PARENT;
-       layoutParams.height =imageHeight1-imageHeight;
+       //int a=layoutParams.MATCH_PARENT-finalImageHeghit;
+       layoutParams.height =imageHeight1-finalImageHeghit;
        toolbar1.setLayoutParams(layoutParams);
-//
+
     }
 
     @Override
@@ -116,9 +118,9 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         BadyMainActivity.this.startActivity(intent);
     }
 
-    public Drawable getDrawable(Context context)
+ /*   public Drawable getDrawable(Context context)
     {
        Drawable drawable= ResourcesCompat.getDrawable(context.getResources(), R.drawable.qarne,null);
        return drawable;
-    }
+    }*/
 }

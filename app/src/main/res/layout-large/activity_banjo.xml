@@ -42,6 +42,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:text="@string/text"
+                    android:textSize="20sp"
                     android:layout_margin="50dp"/>
 
             </LinearLayout>

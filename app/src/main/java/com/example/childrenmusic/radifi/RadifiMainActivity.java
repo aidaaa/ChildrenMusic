@@ -45,11 +45,12 @@ public class RadifiMainActivity extends AppCompatActivity implements RadifiAdapt
         RadifiAdapter adapter=new RadifiAdapter(this, RadifiDataGenerator.getRadifiDataModel(this),this);
         adapter.notifyDataSetChanged();
 
-        radifi_recycler.setLayoutManager(new GridLayoutManager(this, 4, LinearLayoutManager.VERTICAL,false));
+        radifi_recycler.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL,false));
         radifi_recycler.setAdapter(adapter);
 
-        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
+       BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
         int imageHeight = bd.getBitmap().getHeight();
+        int finalImageHeghit=imageHeight;
         int imageWidth = bd.getBitmap().getWidth();
 
 
@@ -59,7 +60,7 @@ public class RadifiMainActivity extends AppCompatActivity implements RadifiAdapt
 
         CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar_r.getLayoutParams();
         int a=imageHeight-layoutParams.MATCH_PARENT;
-        layoutParams.height =imageHeight1-imageHeight;
+        layoutParams.height =imageHeight1-finalImageHeghit;
         toolbar_r.setLayoutParams(layoutParams);
     }
 

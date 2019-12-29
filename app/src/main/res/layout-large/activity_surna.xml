@@ -34,15 +34,21 @@
             android:background="@drawable/curve_white">
 
 
-            <TextView
-                android:id="@+id/txt_surna"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="@string/text"
-                android:layout_margin="50dp"/>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/txt_surna"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="50dp"
+                        android:gravity="center"
+                        android:text="@string/text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </ScrollView>
 
         </LinearLayout>
 

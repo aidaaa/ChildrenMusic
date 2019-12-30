@@ -45,6 +45,14 @@
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
+    <ImageView
+        android:id="@+id/body_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tar"
+        app:layout_anchor="@+id/netset"
+        app:layout_anchorGravity="top|center" />
+
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/netset"
             android:layout_width="match_parent"

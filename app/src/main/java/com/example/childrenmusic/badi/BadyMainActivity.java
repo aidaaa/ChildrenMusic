@@ -4,10 +4,12 @@ package com.example.childrenmusic.badi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -19,6 +21,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -33,9 +37,10 @@ import com.example.childrenmusic.badi.player.SurnaActivity;
 public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.OnItemClickListener {
 
     RecyclerView recyclerView;
-
+    CollapsingToolbarLayout collapsingToolbarLayout;
     NestedScrollView net;
     Toolbar toolbar1;
+    ImageView body_gif;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -53,10 +58,22 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         recyclerView=findViewById(R.id.recycler);
         net=findViewById(R.id.netset);
         toolbar1=findViewById(R.id.toolbar1);
+        body_gif=findViewById(R.id.body_gif);
+        collapsingToolbarLayout=findViewById(R.id.collapsingToolbarLayout);
 
-        /*if (!recyclerView.hasNestedScrollingParent(ViewCompat.TYPE_NON_TOUCH))
+    /*    collapsingToolbarLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                body_gif.setImageDrawable(ResourcesCompat.getDrawable(getApplicationContext().getResources(),R.drawable.sorna,null));
+                return false;
+            }
+        });*/
+
+       /* if (!recyclerView.hasNestedScrollingParent(ViewCompat.TYPE_TOUCH))
         {
-            recyclerView.startNestedScroll(View.SCROLL_AXIS_VERTICAL,ViewCompat.TYPE_NON_TOUCH);
+            recyclerView.startNestedScroll(View.SCROLL_AXIS_VERTICAL,ViewCompat.TYPE_TOUCH);
+            body_gif.setImageDrawable(ResourcesCompat.getDrawable(getApplicationContext().getResources(),R.drawable.sorna,null));
+
         }*/
         // net=findViewById(R.id.netset);
 

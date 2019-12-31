@@ -40,7 +40,6 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
     CollapsingToolbarLayout collapsingToolbarLayout;
     NestedScrollView net;
     Toolbar toolbar1;
-    ImageView body_gif;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -52,30 +51,12 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        // appBarLayout=findViewById(R.id.appBarLayout);
 
 
         recyclerView=findViewById(R.id.recycler);
         net=findViewById(R.id.netset);
         toolbar1=findViewById(R.id.toolbar1);
-        body_gif=findViewById(R.id.body_gif);
         collapsingToolbarLayout=findViewById(R.id.collapsingToolbarLayout);
-
-    /*    collapsingToolbarLayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                body_gif.setImageDrawable(ResourcesCompat.getDrawable(getApplicationContext().getResources(),R.drawable.sorna,null));
-                return false;
-            }
-        });*/
-
-       /* if (!recyclerView.hasNestedScrollingParent(ViewCompat.TYPE_TOUCH))
-        {
-            recyclerView.startNestedScroll(View.SCROLL_AXIS_VERTICAL,ViewCompat.TYPE_TOUCH);
-            body_gif.setImageDrawable(ResourcesCompat.getDrawable(getApplicationContext().getResources(),R.drawable.sorna,null));
-
-        }*/
-        // net=findViewById(R.id.netset);
 
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setHasFixedSize(true);
@@ -90,7 +71,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
 
         int imageHeight = bd.getBitmap().getHeight();
-        int finalImageHeghit=imageHeight+imageHeight;
+        int finalImageHeghit=imageHeight+imageHeight+(imageHeight/9);
         int imageWidth = bd.getBitmap().getWidth();
 
 
@@ -135,9 +116,4 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         BadyMainActivity.this.startActivity(intent);
     }
 
- /*   public Drawable getDrawable(Context context)
-    {
-       Drawable drawable= ResourcesCompat.getDrawable(context.getResources(), R.drawable.qarne,null);
-       return drawable;
-    }*/
 }

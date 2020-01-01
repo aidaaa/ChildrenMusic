@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -46,6 +47,7 @@ public class QanonActivity extends AppCompatActivity {
         txt_qanon=findViewById(R.id.txt_qanon);
         Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
         txt_qanon.setTypeface(typface);
+        txt_qanon.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

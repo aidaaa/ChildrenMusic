@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -43,6 +44,7 @@ public class QeychakActivity extends AppCompatActivity {
         txt_qeychak=findViewById(R.id.txt_qeychak);
         Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
         txt_qeychak.setTypeface(typface);
+        txt_qeychak.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent=getIntent();
         int id=intent.getIntExtra("id",0);

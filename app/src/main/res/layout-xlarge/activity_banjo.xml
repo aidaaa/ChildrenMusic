@@ -33,23 +33,17 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/curve_white">
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_centerInParent="true">
                     <TextView
                         android:id="@+id/txt_banjo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:text="@string/text"
-                        android:textSize="20sp"
+                        android:textSize="30sp"
+                        android:scrollbars="vertical"
                         android:layout_margin="50dp"/>
-                </ScrollView>
             </LinearLayout>
 
 

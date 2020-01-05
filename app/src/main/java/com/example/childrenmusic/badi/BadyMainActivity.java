@@ -4,6 +4,7 @@ package com.example.childrenmusic.badi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -68,21 +69,72 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(adapter);
 
-        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
+        //large
+        if ((getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK) ==
+                Configuration.SCREENLAYOUT_SIZE_LARGE)
+        {
+            BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
 
-        int imageHeight = bd.getBitmap().getHeight();
-        int finalImageHeghit=imageHeight+imageHeight+(imageHeight/9);
-        int imageWidth = bd.getBitmap().getWidth();
+            int imageHeight = bd.getBitmap().getHeight();
+            int finalImageHeghit=imageHeight+imageHeight+imageHeight;
+            int imageWidth = bd.getBitmap().getWidth();
 
 
-        BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.bady_inter_menu);
-        int imageHeight1 = bd1.getBitmap().getHeight();
-        int imageWidth1 = bd1.getBitmap().getWidth();
+            BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.bady_inter_menu);
+            int imageHeight1 = bd1.getBitmap().getHeight();
+            int imageWidth1 = bd1.getBitmap().getWidth();
 
-       CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar1.getLayoutParams();
-       //int a=layoutParams.MATCH_PARENT-finalImageHeghit;
-       layoutParams.height =imageHeight1-finalImageHeghit;
-       toolbar1.setLayoutParams(layoutParams);
+            CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar1.getLayoutParams();
+            //int a=layoutParams.MATCH_PARENT-finalImageHeghit;
+            layoutParams.height =imageHeight1-finalImageHeghit;
+            toolbar1.setLayoutParams(layoutParams);
+        }
+
+        //xlarge
+        if ((getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK) ==
+                Configuration.SCREENLAYOUT_SIZE_XLARGE)
+        {
+            BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
+
+            int imageHeight = bd.getBitmap().getHeight();
+            int finalImageHeghit=imageHeight+imageHeight;
+            int imageWidth = bd.getBitmap().getWidth();
+
+
+            BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.bady_inter_menu);
+            int imageHeight1 = bd1.getBitmap().getHeight();
+            int imageWidth1 = bd1.getBitmap().getWidth();
+
+            CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar1.getLayoutParams();
+            //int a=layoutParams.MATCH_PARENT-finalImageHeghit;
+            layoutParams.height =imageHeight1-finalImageHeghit;
+            toolbar1.setLayoutParams(layoutParams);
+        }
+
+        //normal
+        if ((getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK) ==
+                Configuration.SCREENLAYOUT_SIZE_NORMAL)
+        {
+            BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
+
+            int imageHeight = bd.getBitmap().getHeight();
+            int finalImageHeghit=imageHeight;
+            int imageWidth = bd.getBitmap().getWidth();
+
+
+            BitmapDrawable bd1 = (BitmapDrawable) this.getResources().getDrawable(R.drawable.bady_inter_menu);
+            int imageHeight1 = bd1.getBitmap().getHeight();
+            int imageWidth1 = bd1.getBitmap().getWidth();
+
+            CollapsingToolbarLayout.LayoutParams layoutParams = (CollapsingToolbarLayout.LayoutParams) toolbar1.getLayoutParams();
+            //int a=layoutParams.MATCH_PARENT-finalImageHeghit;
+            layoutParams.height =imageHeight1-finalImageHeghit;
+            toolbar1.setLayoutParams(layoutParams);
+        }
+
 
     }
 

@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_weight="1">
             <ImageView
                 android:id="@+id/surna_img"
                 android:layout_width="match_parent"
@@ -30,28 +30,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.25"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@drawable/curve_white">
 
-
-            <TextView
-                android:id="@+id/txt_surna"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:scrollbars="vertical"
-                android:padding="50dp"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:layout_centerInParent="true">
+                <TextView
+                    android:id="@+id/txt_surna"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="@string/text"
+                    android:layout_margin="50dp"/>
+            </ScrollView>
 
         </LinearLayout>
 

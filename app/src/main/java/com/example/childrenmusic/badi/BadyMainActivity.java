@@ -121,7 +121,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
             BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(R.drawable.sorna);
 
             int imageHeight = bd.getBitmap().getHeight();
-            int finalImageHeghit=imageHeight;
+            int finalImageHeghit=imageHeight+imageHeight+imageHeight;
             int imageWidth = bd.getBitmap().getWidth();
 
 

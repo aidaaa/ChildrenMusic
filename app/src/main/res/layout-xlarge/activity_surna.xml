@@ -33,13 +33,7 @@
             android:layout_weight="1"
             android:background="@drawable/curve_white">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_centerInParent="true">
-                <TextView
+            <TextView
                     android:id="@+id/txt_surna"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -49,9 +43,10 @@
                     android:gravity="center"
                     android:textSize="30sp"
                     android:textStyle="bold"
+                android:scrollbars="vertical"
                     android:text="@string/text"
                     android:layout_margin="50dp"/>
-            </ScrollView>
+
 
         </LinearLayout>
 

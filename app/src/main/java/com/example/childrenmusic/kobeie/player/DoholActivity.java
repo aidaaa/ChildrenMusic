@@ -53,23 +53,23 @@ public class DoholActivity extends AppCompatActivity {
             case 0:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qaval_player, null));
                 txt_dohol.setText("«قاوالِ» آذربایجان و «دایره» یا «دفِ» کردستان شامل یک حلقه\u200Cي چوبی به شکل دایره است که یک طرف آن را پوست یا تلق می\u200Cکشند. درون دایره هم حلقه\u200Cهایی فلزی آویزان است که با پوست در تماس\u200Cاند. نوازنده ساز را از طریق ضربه زدنِ (کوبیدنِ) دست به پوست می\u200Cنوازد.");
-                uri = "http://192.168.10.85:8099/sorna.mp3";
+                uri = "http://79.175.176.185:7589/sorna.mp3";
                 break;
             case 1:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.naqare_player, null));
-                uri = "http://192.168.10.85:8099/naghare.mp3";
+                uri = "http://79.175.176.185:7589/naghare.mp3";
                 txt_dohol.setText("«نقّاره»\u200Cي خراسان، «ناقاره\u200C»ي  قشقایی و بختیاری و «دوسَرکوتِن» گیلان و مازندران بسیار به هم شبیه\u200Cاند و در واقع سازهایی هستند که دو سر دارد و بر سر آن کوبیده می\u200Cشود. \n" +
                         "اين ساز، دو طبل دارد که با ریسمان به هم متّصل\u200Cاند. یکی از طبل\u200Cها بزرگ\u200Cتر است. نوازنده، ساز را با دو مضراب چوبی می\u200Cنوازد. چوب بزرگ\u200Cتر برای دست راست و طبل بزرگ\u200Cتر است و چوب کوچک\u200Cتر برای دست چپ و طبل کوچک\u200Cتر. (خوب شاید ما چپ\u200Cدست\u200Cها بتوانیم برعکس عمل کنیم!) پوست رويه\u200Cي طبل\u200Cها از پوست گاو است و بدنه\u200Cي آن هم از مس و یا سفال.\n");
                 break;
             case 2:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.dohol_player, null));
-                uri = "http://192.168.10.85:8099/dohol.mp3";
+                uri = "http://79.175.176.185:7589/dohol.mp3";
                 txt_dohol.setText("«دُهُلِ» بندرعباس و خراسان و بوشهر، «دَمّام» بوشهر، «تیمبکِ (طمبوکِ)» سیستان و «دُهُلَکِ» بلوچستان از این نظر به هم شبیه\u200Cاند که بدنه\u200Cي استوانه\u200Cشکلی دارند و دو طرف این بدنه پوست کشیده شده و نوازنده روی پوست می\u200Cکوبد.\n" +
                         " البته سازهایی که در این صفحه نام برده شدند، با هم تفاوت\u200Cهایی دارند؛ از جمله تفاوت در اندازه و یا در شیوه\u200Cي نواختن. مثلاً دهلک را روی زمین مي\u200Cگذارند و می\u200Cنوازند اما تیمبوک را با تسمه\u200Cای روی شانه آویزان می\u200Cکنند. دهل را با کوبیدن دو چوب به دو طرف آن می\u200Cنوازند امّا در مورد تیمبوک طرف راست را با چوب و طرف چپ را با دست می\u200Cکوبند.\n");
                 break;
             case 3:
                 dohol_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.senj_player, null));
-                uri = "http://192.168.10.85:8099/sorna.mp3";
+                uri = "http://79.175.176.185:7589/sorna.mp3";
                 txt_dohol.setText("فلزی دایره\u200Cشکل است که وسطش کمی تو رفته است تا دسته\u200Cي ساز را تشکیل بدهد. نوازنده دسته\u200Cي ساز را در دست می\u200Cگیرد و دو سنج را به هم می\u200Cکوبد.");
                 break;
         }

@@ -94,6 +94,27 @@ public class QanonActivity extends AppCompatActivity {
                         R.anim.myanimation);
         qanon_img.startAnimation(animation1);
 
+
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Animation animation2 =
+                        AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.animation);
+                qanon_img.setAnimation(animation2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         qanon_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

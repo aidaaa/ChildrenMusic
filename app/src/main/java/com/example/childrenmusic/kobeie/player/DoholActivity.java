@@ -79,6 +79,27 @@ public class DoholActivity extends AppCompatActivity {
                         R.anim.myanimation);
         dohol_img.startAnimation(animation1);
 
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Animation animation2 =
+                        AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.animation);
+                dohol_img.setAnimation(animation2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 

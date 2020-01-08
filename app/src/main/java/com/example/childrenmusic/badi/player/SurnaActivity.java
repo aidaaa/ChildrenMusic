@@ -105,6 +105,26 @@ public class SurnaActivity extends AppCompatActivity {
                         R.anim.myanimation);
         surna_img.startAnimation(animation1);
 
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Animation animation2 =
+                        AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.animation);
+                surna_img.setAnimation(animation2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         surna_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

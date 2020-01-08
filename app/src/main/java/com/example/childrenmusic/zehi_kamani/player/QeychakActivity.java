@@ -66,6 +66,27 @@ public class QeychakActivity extends AppCompatActivity {
                 AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.myanimation);
         qeychak_img.startAnimation(animation1);
+
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Animation animation2 =
+                        AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.animation);
+                qeychak_img.setAnimation(animation2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         qeychak_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

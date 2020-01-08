@@ -43,7 +43,7 @@
                     android:scrollbars="vertical"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="30sp"
                     android:text="@string/text"
                     android:layout_margin="50dp"/>
 

@@ -1,5 +1,7 @@
 package com.example.childrenmusic.zehi_zakhmeie.player;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -15,11 +17,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.childrenmusic.R;
+import com.example.childrenmusic.radifi.player.QanonActivity;
+import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.PlaybackParameters;
+import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -32,7 +41,7 @@ public class BanjoActivity extends AppCompatActivity {
     private PlayerControlView player_view_banjo;
     ImageView banjo_img;
     String uri;
-    TextView txt_banjo;
+    TextView txt_banjo,txt_controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +51,10 @@ public class BanjoActivity extends AppCompatActivity {
         banjo_img=findViewById(R.id.banjo_img);
 
         txt_banjo=findViewById(R.id.txt_banjo);
+        txt_controller=findViewById(R.id.txt);
         Typeface typface=Typeface.createFromAsset(getAssets(),"fonts/iransans.ttf");
         txt_banjo.setTypeface(typface);
+        txt_controller.setTypeface(typface);
         txt_banjo.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent=getIntent();
@@ -53,21 +64,25 @@ public class BanjoActivity extends AppCompatActivity {
             case 0:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.oud_player, null));
                 uri = "http://79.175.176.185:7589/oud.mp3";
+                txt_controller.setText("موسیقی عود");
                 txt_banjo.setText("«عودِ» بندرعباس_ و يا بطور کلّي در جنوب ايران_ سازی است که یک کاسه\u200Cي صوتی بسیار بزرگ و یک دسته\u200Cي بسیار کوتاه دارد. کاسه\u200Cي صوتی عود شبیه گلابی\u200Cای است که از وسط نصف شده است.\n" +
                         "کنجکاوی: در مورد این موضوع تحقیق کنید: سفرِ سازِ عود و جدّ و نوادگانش. \n" +
                         "اشاره: ساز عود همان «بربتِ»  ایرانی است که بعدها به «عود» تبدیل شد. \n");
                 break;
             case 1:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.robab_player, null));
+                txt_controller.setText("موسیقی رباب");
                 txt_banjo.setText("کاسه\u200Cي صوتی «رُبابِ» سیستان و بَلوچستان دو بخش بالایی و پایینی دارد. روی قسمت پایینی پوست کشیده می\u200Cشود؛ یعنی سطح رویی کاسه از چوب نیست بلکه از پوست حیوان است. دسته\u200Cي ساز رباب نسبتاً کوتاه است و گوشی\u200Cهاي زیادی براي کوک دارد.");
                 uri = "http://79.175.176.185:7589/robab.mp3";
                 break;
             case 2:
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.banjo_player, null));
+                txt_controller.setText("موسیقی بنجو");
                 txt_banjo.setText("قسمت سمتِ چپِ بنجوی سیستان و بلوچستان یعنی کاسه\u200Cي صوتی آن مستطیل\u200Cشکل است و یک سوراخ در وسط دارد. در سازهایی که در صفحات قبل معرِّفی شد نوازنده برای کوتاه کردن طول قسمتی از سیم که می\u200Cلرزد انگشتش را روی سیم و بر «پرده»\u200Cي روی دسته قرار می\u200Cداد. ولی این ساز کمی متفاوت است و روی قسمت بالایی آن پر از دکمه (شستي، کلاویه) است و نوازنده با دست راستش و با تکّه\u200Cای چوب یا کائوچو به سیم\u200Cها زخمه می\u200Cزند و با دست چپش هم دکمه\u200Cها را فشار می\u200Cدهد.");
                 uri = "http://79.175.176.185:7589/banjo.mp3";
                 break;
             case 3:
+                txt_controller.setText("موسیقی زنبورک");
                 banjo_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.zanborak_player, null));
                 txt_banjo.setText("آیا شده تکّه\u200Cای برگ یا علف میان انگشتان دو دستتان قرار بدهید و طوری به آن فوت کنید که لرزش برگ صدای سوت ایجاد کند. زنبورک هم بر اساس چنین ایده\u200Cای کار می\u200Cکند. نوازنده قسمتی از زنبورک را در دهان مي\u200Cگذارد و می\u200Cدمد و به میله\u200Cي نازک آن زخمه می\u200Cزند. \n" +
                         "برخی زنبورک را جزء هیچ\u200Cيك از دسته\u200Cهاي سازهای بادی، زهی و کوبه\u200Cای نمی\u200Cدانند. شاید ما بتوانیم برای این ساز یک دسته\u200Cي جدید «بادی-زخمه\u200Cای» ایجاد کنیم و زنبورک را سازی بادی-زخمه\u200Cای به حساب آوریم!\n" +
@@ -125,6 +140,71 @@ public class BanjoActivity extends AppCompatActivity {
                 .createMediaSource(audioUri);
 
         player.prepare(mediaSource);
+
+        player.addListener(new Player.EventListener() {
+
+            @Override
+            public void onTimelineChanged(Timeline timeline, Object manifest, int reason) {
+
+            }
+
+            @Override
+            public void onTracksChanged(TrackGroupArray trackGroups, TrackSelectionArray trackSelections) {
+
+            }
+
+            @Override
+            public void onLoadingChanged(boolean isLoading) {
+
+            }
+
+            @Override
+            public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+
+            }
+
+            @Override
+            public void onRepeatModeChanged(int repeatMode) {
+
+            }
+
+            @Override
+            public void onShuffleModeEnabledChanged(boolean shuffleModeEnabled) {
+
+            }
+
+            @Override
+            public void onPlayerError(ExoPlaybackException error) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(BanjoActivity.this);
+                builder.setTitle("مشکل در پخش ");
+                builder.setIcon(R.drawable.nheadphones);
+                builder.setMessage("در پخش موزیک مشکل پیش آمده لطفا مجدد تلاش کنید");
+
+                builder.setNegativeButton("باشه", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+
+            @Override
+            public void onPositionDiscontinuity(int reason) {
+
+            }
+
+            @Override
+            public void onPlaybackParametersChanged(PlaybackParameters playbackParameters) {
+
+            }
+
+            @Override
+            public void onSeekProcessed() {
+
+            }
+        });
     }
 
     @Override

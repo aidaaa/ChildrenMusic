@@ -3,7 +3,7 @@
     package="com.example.childrenmusic">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,32 +11,45 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".zehi_zakhmeie.player.BanjoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".zehi_kamani.player.QeychakActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".radifi.player.QanonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".kobeie.player.DoholActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".zehi_kamani.ZehiKamaniMainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".zehi_zakhmeie.ZehiZakhmeieMainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".radifi.RadifiMainActivity"
-             android:screenOrientation="portrait"/>
-        <activity android:name=".kobeie.KobeieMainActivity"
-             android:screenOrientation="portrait"/>
-        <activity android:name=".badi.BadyMainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".badi.player.SurnaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".main.MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.Splash"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.BigineerActivity"></activity>
+        <activity
+            android:name=".zehi_zakhmeie.player.BanjoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zehi_kamani.player.QeychakActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".radifi.player.QanonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kobeie.player.DoholActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zehi_kamani.ZehiKamaniMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zehi_zakhmeie.ZehiZakhmeieMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".radifi.RadifiMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kobeie.KobeieMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".badi.BadyMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".badi.player.SurnaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.Splash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

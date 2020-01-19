@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
+import com.example.BigineerActivity;
 import com.example.childrenmusic.R;
 import com.example.childrenmusic.main.MainActivity;
 
@@ -24,7 +25,7 @@ public class Splash extends AppCompatActivity {
           new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent homeintent=new Intent(Splash.this, MainActivity.class);
+                Intent homeintent=new Intent(Splash.this, BigineerActivity.class);
                 startActivity(homeintent);
                 finish();
             }

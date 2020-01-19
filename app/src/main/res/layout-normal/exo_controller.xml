@@ -16,22 +16,23 @@
             android:tint="@color/gray"
             style="@style/ExoMediaButton.Play"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="8dp"
             android:layout_centerVertical="true"
             android:background="@drawable/round_button"/>
 
         <ImageButton
             android:id="@id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:tint="@color/gray"
-            style="@style/ExoMediaButton.Pause"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="18dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/round_button"/>
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_button"
+            android:tint="@color/gray" />
 
         <TextView
             android:id="@+id/txt"
@@ -39,12 +40,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="11dp"
             android:gravity="center_vertical"
             android:text="نوایی از ساز سنتور"
             android:padding="5dp"
-            android:textSize="10sp"
-            android:background="@drawable/your_work"
+            android:textSize="15sp"
+            android:background="@drawable/your_work_m"
             android:textStyle="bold"/>
 
 

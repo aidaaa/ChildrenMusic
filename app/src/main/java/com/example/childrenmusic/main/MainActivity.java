@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
+
         setContentView(R.layout.activity_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,

@@ -40,12 +40,11 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
             android:layout_marginTop="18dp"
-            android:gravity="center"
-            android:layout_centerVertical="true"
-            android:text="موسیقی سنتور"
+            android:gravity="center_vertical"
+            android:text="نوایی از ساز سنتور"
             android:padding="5dp"
             android:textSize="15sp"
-            android:background="@drawable/txt_curve"
+            android:background="@drawable/your_work"
             android:textStyle="bold"/>
 
 

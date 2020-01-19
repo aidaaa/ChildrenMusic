@@ -64,13 +64,13 @@ public class QeychakActivity extends AppCompatActivity {
             case 0:
                 qeychak_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.kamanche_player, null));
                 uri = "http://79.175.176.185:7589/kamanche.mp3";
-                txt_controller.setText("موسیقی کمانچه");
+                txt_controller.setText("نوایی از ساز کمانچه");
                 txt_qeychak.setText("«کمانچه\u200C»ي لرستان یا «قِجَقِ» ترکمن، شامل یک کاسه\u200Cي صوتی است که روی آن پوست کشیده می\u200Cشود. انتهای کاسه یک میله\u200Cی فلزی نازک دارد. وقتی نوازنده این ساز را می\u200Cنوازد آن را عمودی می\u200Cگیرد، نوک میله را روی زمین می\u200Cگذارد و با یک دست کمانه را روی سیم\u200Cها می\u200Cکشد. نوازنده می\u200Cتواند هنگام مالشِ کمانه ساز را روی پایه\u200Cي فلزی کمی بچرخاند و با این کار صدای متفاوتی ایجاد کند. کاسه\u200Cي کمانچه ترکه\u200Cای است. پشت کاسه\u200Cي کمانچه\u200Cي لرستان باز است.");
                 break;
             case 1:
                 qeychak_img.setImageDrawable(ResourcesCompat.getDrawable(this.getResources(), R.drawable.qeychak_player, null));
                 txt_qeychak.setText("قیچک سازی کمانی است و مربوط به سيستان و بلوچستان. جلوی کاسه\u200Cي قیچک شبیه لنگر کشتی است. کمانه\u200Cي قیچک خمیده است و قیچک را هم مثل کمانچه موقع نواختن عمودی می\u200Cگیرند.");
-                txt_controller.setText("موسیقی قیچک");
+                txt_controller.setText("نوایی از ساز قیچک");
                 uri = "http://79.175.176.185:7589/ghezhak.mp3";
                 break;
         }

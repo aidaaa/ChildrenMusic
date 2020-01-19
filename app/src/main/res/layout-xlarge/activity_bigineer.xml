@@ -7,7 +7,6 @@
     android:background="@drawable/start"
     tools:context="com.example.BigineerActivity">
 
-
     <Button
         android:id="@+id/btn_biginer"
         android:layout_width="match_parent"

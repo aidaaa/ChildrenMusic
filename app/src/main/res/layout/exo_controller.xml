@@ -46,7 +46,7 @@
             android:text="موسیقی سننور"
             android:padding="5dp"
             android:textSize="5sp"
-            android:background="@drawable/txt_curve"
+            android:background="@drawable/your_work"
             android:textStyle="bold"/>
 
 

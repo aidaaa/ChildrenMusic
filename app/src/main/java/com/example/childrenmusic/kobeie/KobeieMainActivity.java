@@ -3,6 +3,7 @@ package com.example.childrenmusic.kobeie;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
 
     private RecyclerView recyclerView;
     Toolbar toolbar_k;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
 
         recyclerView=findViewById(R.id.recycler_kobeie);
         toolbar_k=findViewById(R.id.toolbar_k);
+        mp=MediaPlayer.create(this,R.raw.click);
+        mp.setLooping(false);
 
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setHasFixedSize(true);
@@ -71,6 +75,7 @@ public class KobeieMainActivity extends AppCompatActivity implements KobeieAdapt
     public void onClick(KobeieDataModel model)
     {
         Intent intent=new Intent(KobeieMainActivity.this, DoholActivity.class);
+        mp.start();
         switch (model.getId())
         {
             case 0:

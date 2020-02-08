@@ -2,6 +2,7 @@ package com.example.childrenmusic.zehi_zakhmeie;
 
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class ZehiZakhmeieMainActivity extends AppCompatActivity implements ZehiZ
 
     RecyclerView zehi_zakhme_recycler;
     Toolbar toolbar_z;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,9 @@ public class ZehiZakhmeieMainActivity extends AppCompatActivity implements ZehiZ
 
         zehi_zakhme_recycler=findViewById(R.id.zehi_zakhme_recycler);
         toolbar_z=findViewById(R.id.toolbar_z);
+
+        mp=MediaPlayer.create(this,R.raw.click);
+        mp.setLooping(false);
 
         ViewCompat.setNestedScrollingEnabled(zehi_zakhme_recycler, false);
         zehi_zakhme_recycler.setHasFixedSize(true);
@@ -66,6 +71,8 @@ public class ZehiZakhmeieMainActivity extends AppCompatActivity implements ZehiZ
     public void onClick(ZehiZakhmeieDataModel model)
     {
         Intent intent=new Intent(ZehiZakhmeieMainActivity.this, BanjoActivity.class);
+        mp.start();
+
         switch (model.getId())
         {
             case 0:

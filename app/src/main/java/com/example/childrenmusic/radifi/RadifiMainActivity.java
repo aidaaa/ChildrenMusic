@@ -2,6 +2,7 @@ package com.example.childrenmusic.radifi;
 
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class RadifiMainActivity extends AppCompatActivity implements RadifiAdapt
 
     RecyclerView radifi_recycler;
     Toolbar toolbar_r;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class RadifiMainActivity extends AppCompatActivity implements RadifiAdapt
 
         radifi_recycler=findViewById(R.id.radifi_recycler);
         toolbar_r=findViewById(R.id.toolbar_r);
+        mp=MediaPlayer.create(this,R.raw.click);
+        mp.setLooping(false);
 
         ViewCompat.setNestedScrollingEnabled(radifi_recycler, false);
         radifi_recycler.setHasFixedSize(true);
@@ -67,6 +71,7 @@ public class RadifiMainActivity extends AppCompatActivity implements RadifiAdapt
     @Override
     public void onClick(RadifiDataModel model) {
         Intent intent=new Intent(RadifiMainActivity.this, QanonActivity.class);
+        mp.start();
         switch (model.getId())
         {
             case 0:

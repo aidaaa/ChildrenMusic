@@ -8,6 +8,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -41,6 +42,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
     CollapsingToolbarLayout collapsingToolbarLayout;
     NestedScrollView net;
     Toolbar toolbar1;
+    MediaPlayer mp;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -52,7 +54,8 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        mp=MediaPlayer.create(this,R.raw.click);
+        mp.setLooping(false);
 
         recyclerView=findViewById(R.id.recycler);
         net=findViewById(R.id.netset);
@@ -142,6 +145,7 @@ public class BadyMainActivity extends AppCompatActivity implements BadyAdapter.O
     public void onClick(BadyDataModel model)
     {
         Intent intent=new Intent(BadyMainActivity.this, SurnaActivity.class);
+        mp.start();
        switch (model.getId()) {
            case 0:
                intent.putExtra("id",0);
